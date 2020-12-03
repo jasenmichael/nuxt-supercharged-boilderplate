@@ -1,0 +1,34 @@
+{
+  "name": "Nuxt Supercharged Boilderplate",
+  "description": "Features include: Netlify Identity, NetlifyCms, PWA, TWA, Nuxt Content, SEO meta in head, flat-file site settings, and more",
+  "lang": "en-US",
+  "networks": [
+    {
+      "name": "Twitter",
+      "url": "https://nuxt.org",
+      "icon": "/img/twitter.png",
+      "handle": "jasen_michael"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://nuxt.org",
+      "icon": "/img/facebook.png",
+      "handle": "michael.jasen"
+    }
+  ],
+  "favicon": "/favicon.ico",
+  "tags": [
+    "nuxt",
+    "vue",
+    "netlify",
+    "boilerplate",
+    "netlifycms",
+    "netlifyidentity",
+    "nuxtcontent",
+    "flat-file",
+    "seo",
+    "og-tags",
+    "twitter-tags",
+    "seo-share"
+  ]
+}
