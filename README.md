@@ -35,26 +35,23 @@ steps taken to create:
   - [x] [metatags.io](https://metatags.io/) 
   - [x] [Twitter validator](https://cards-dev.twitter.com/validator)
   - [x] [Facebook Debugger](https://developers.facebook.com/tools/debug/)
-- [ ] enable netlify identity
-- [ ] invite self
+- [ ] setup and config Netlify identity
+  - [x] enable netlify identity
+  - [ ] invite self
   todo:
 - [ ] install post-css
 - [ ] add sitemap
 - [ ] add feed feed.json and rss.xml
 - [ ] add robots.txt
 
-
 env
  - NGROK_AUTHTOKEN - for ngrok usage in dev
 
 Nuxt Content / NetlifyCms Collections
 - site data (json)
-  - url ✔️
   - name ✔️
   - description
-  - keywords
   - language
-  - summary
   - networks
     - name
     - url
