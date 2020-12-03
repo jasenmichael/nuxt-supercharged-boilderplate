@@ -50,7 +50,7 @@ steps taken to create:
 env
  - NGROK_AUTHTOKEN - for ngrok usage in dev
 
-Nuxt Content / NetlifyCms Collections
+Nuxt Content / NetlifyCms Collections scheme - static/admin/config.yml
 - site data (json)
   - name: String
   - description: String
@@ -67,7 +67,8 @@ Nuxt Content / NetlifyCms Collections
   -  cover: Image
   -  description: String
   -  body: Markdown
-  to add in static/config.yml
+  
+to add in static/config.yml
 - articles
 - blog
 - photos

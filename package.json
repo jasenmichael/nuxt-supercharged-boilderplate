@@ -1,5 +1,5 @@
 {
-  "name": "Nuxt Supercharged Boilderplate",
+  "name": "nuxt-supercharged-boilderplate",
   "description": "Features include: Netlify Identity, NetlifyCms, PWA, TWA, Nuxt Content, SEO meta in head, flat-file site settings, and more",
   "version": "1.0.0",
   "private": true,
