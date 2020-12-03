@@ -35,9 +35,10 @@ steps taken to create:
   - [x] [metatags.io](https://metatags.io/) 
   - [x] [Twitter validator](https://cards-dev.twitter.com/validator)
   - [x] [Facebook Debugger](https://developers.facebook.com/tools/debug/)
-- [ ] setup and config Netlify identity
+- [x] setup and config Netlify identity and Git-gateway for Netlify Cms
   - [x] enable netlify identity
-  - [ ] invite self
+  - [x] invite self
+  - [x] enable git-gateway
   todo:
 - [ ] install post-css
 - [ ] add sitemap
