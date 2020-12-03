@@ -18,7 +18,7 @@ Features:
 steps taken to create:
 - [x] create-nuxt-app
 - [x] install netlifycms
-  - [x] create static/admin.html
+  - [x] create pages/admin.vue
   - [x] create static/config.yml
   - [x] run netlify cms locally ```npx netlify-cms-proxy-server```
 - [x] create site data via local cms
@@ -30,16 +30,18 @@ steps taken to create:
 - [x] push to github
 - [x] create netlify.toml, and add deploy to netlify in README.md
 - [x] deploy to netlify from github
-- [x] check seo tags on..
-  ```note: twiter validator and fb debugger cache your site, so changes in your header will not reflect immediatly when you re-run, use metatags first, and to work around twitter and fb cache of site - use a dev branch or change subdomain in netlify, as you will have a new url ;)```
+- [x] check seo tags on.
   - [x] [metatags.io](https://metatags.io/) 
   - [x] [Twitter validator](https://cards-dev.twitter.com/validator)
   - [x] [Facebook Debugger](https://developers.facebook.com/tools/debug/)
+  
+  ```note: twiter validator and fb debugger cache your site, so changes in your header will not reflect immediatly when you re-run, use metatags first, and to work around twitter and fb cache of site - use a dev branch or change subdomain in netlify, as you will have a new url ;)```
 - [x] setup and config Netlify identity and Git-gateway for Netlify Cms
   - [x] enable netlify identity
   - [x] invite self
   - [x] enable git-gateway
   todo:
+- [ ] implement twa module  
 - [ ] install post-css
 - [ ] add sitemap
 - [ ] add feed feed.json and rss.xml
@@ -50,17 +52,22 @@ env
 
 Nuxt Content / NetlifyCms Collections
 - site data (json)
-  - name ✔️
-  - description
-  - language
-  - networks
-    - name
-    - url
-    - icon
-    - handle
-  - favicon
-  - tags
-- pages
+  - name: String
+  - description: String
+  - language: String
+  - networks: Array
+    - name: String 
+    - url: String
+    - icon: Image
+    - handle: String
+  - favicon: Image
+  - tags: String Array
+- pages (markdown)
+  -  title: String
+  -  cover: Image
+  -  description: String
+  -  body: Markdown
+  to add in static/config.yml
 - articles
 - blog
 - photos
