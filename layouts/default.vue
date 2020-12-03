@@ -23,7 +23,7 @@
           </v-list-item-content>
         </v-list-item>
         <!-- admin -->
-        <v-list-item :href="`./admin`" target="_blank">
+        <v-list-item :href="`./admin`">
           <v-list-item-action>
             <v-icon>mdi-cog</v-icon>
           </v-list-item-action>

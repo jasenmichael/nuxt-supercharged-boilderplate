@@ -23,8 +23,7 @@ export default {
   head: {
     // titleTemplate: `%s - ${title}`,
     title,
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
