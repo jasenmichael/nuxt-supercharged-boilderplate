@@ -1,25 +1,8 @@
 <template>
   <div>
-    <a :href="homeUrl">
-      Go back to
-      <h1>{{ homeUrl }}</h1>
-    </a>
-    <v-container>
-      <nuxt />
-    </v-container>
+    <!-- <a href="https://trusting-galileo-4c00bf.netlify.app">
+      https://trusting-galileo-4c00bf.netlify.app
+    </a> -->
+    <nuxt />
   </div>
 </template>
-
-
-
-<script>
-export default {
-  computed: {
-    homeUrl() {
-      return (
-        (this.$config.ngrok && this.$config.ngrok.url) || this.$config.baseUrl
-      )
-    },
-  },
-}
-</script>

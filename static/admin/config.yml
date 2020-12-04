@@ -1,6 +1,6 @@
-# site_url: https://app.netlify.com/sites/trusting-galileo-4c00bf
-# logo_url: https://app.netlify.com/sites/trusting-galileo-4c00bf/icon.png
-logo_url: /icon.png
+site_url: https://trusting-galileo-4c00bf.netlify.app/
+logo_url: https://trusting-galileo-4c00bf.netlify.app/icon.png
+# logo_url: /icon.png
 
 publish_mode: editorial_workflow
 backend:

@@ -2,7 +2,7 @@ const siteData = require('./content/sitedata.json')
 const host = "0.0.0.0" // or "localhost"
 const port = 3000
 const url = process.env.NODE_ENV != "production" ? `http://localhost:${port}` : (process.env.URL || `http://localhost:${port}`)
-console.log("URL:", url)
+// console.log("URL:", url)
 const title = siteData.name || process.env.npm_package_name.replace(/-/g, " ").replace(/(^\w{1})|(\s+\w{1})/g, l => l.toUpperCase())
 const description = siteData.description || process.env.npm_package_description
 const twitterHandle = '@' + siteData.networks.filter(network => network.name == "Twitter")[0].handle
