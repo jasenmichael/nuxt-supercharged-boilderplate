@@ -44,7 +44,7 @@
     </v-navigation-drawer>
 
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-btn icon @click.stop="drawer = !drawer">
+      <v-btn aria-label="menu" icon @click.stop="drawer = !drawer">
         <v-avatar rounded color="white">
           <v-img :src="require('~/assets/icon.png')" />
         </v-avatar>
