@@ -52,7 +52,7 @@ export default {
   components: true,
   buildModules: [
     '@nuxtjs/vuetify',
-    // 'nuxt-purgecss',
+    'nuxt-purgecss',
     // '@nuxtjs/ngrok',
     // 'nuxt-twa-module',
   ],
@@ -105,7 +105,7 @@ export default {
       start_url: "/"
     },
   },
-  // twa: {
+  twa: {
   //   // https://github.com/voorhoede/nuxt-twa-module#readme
   //   defaultUrl: 'url',
   //   hostName: 'nuxt-app-test.netlify.app',
@@ -117,7 +117,7 @@ export default {
   //   statusBarColor: 'grey',
   //   iconPath: '/static/icon.png',
   //   // distFolder: '.nuxt/dist/client',
-  // },
+  },
   ngrok: {
     addr: 8080
   },
