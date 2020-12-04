@@ -1,20 +1,8 @@
 <template>
   <div>
-    <h5>Canonical: {{ canonicalUrl }}</h5>
     <h1>{{ page.title }}</h1>
     <h2>{{ page.description }}</h2>
-    params: {{ params.page || 'home' }}
-    <!-- <img src="" alt=""> -->
     <nuxt-content :document="page" />
-    <pre>Path: {{ $route.fullPath }}</pre>
-    <hr />
-    Page Data:
-    <pre>
-      {{ page }}
-    </pre>
-    <hr />
-    Config:
-    <pre>{{ $config }}</pre>
   </div>
 </template>
 

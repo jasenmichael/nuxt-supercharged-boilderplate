@@ -20,7 +20,7 @@ export default {
     fallback: true
   },
   head: {
-    // titleTemplate: `%s - ${title}`,
+    titleTemplate: `${title} | %s`,
     title,
     meta: [{
         charset: 'utf-8'
@@ -83,20 +83,20 @@ export default {
       // twitter:image:alt
     },
     workbox: {
-          cleanupOutdatedCaches: true,
-          runtimeCaching: [{
-            urlPattern: 'https://fonts.googleapis.com/.*',
-            // handler: 'cacheFirst',
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
-          }, {
-            urlPattern: 'https://cdn.jsdelivr.net/.*',
-            // handler: 'cacheFirst',
-            cacheableResponse: {
-              statuses: [0, 200]
-            }
-          }]
+      cleanupOutdatedCaches: true,
+      runtimeCaching: [{
+        urlPattern: 'https://fonts.googleapis.com/.*',
+        // handler: 'cacheFirst',
+        cacheableResponse: {
+          statuses: [0, 200]
+        }
+      }, {
+        urlPattern: 'https://cdn.jsdelivr.net/.*',
+        // handler: 'cacheFirst',
+        cacheableResponse: {
+          statuses: [0, 200]
+        }
+      }]
     },
     manifest: {
       name: title,
@@ -106,17 +106,17 @@ export default {
     },
   },
   twa: {
-  //   // https://github.com/voorhoede/nuxt-twa-module#readme
-  //   defaultUrl: 'url',
-  //   hostName: 'nuxt-app-test.netlify.app',
-  //   sha256Fingerprints: ['/* your SHA-256 keys */'],
-  //   applicationId: 'com.example.example',
-  //   launcherName: 'Your app name',
-  //   versionCode: 1,
-  //   versionName: '1.0',
-  //   statusBarColor: 'grey',
-  //   iconPath: '/static/icon.png',
-  //   // distFolder: '.nuxt/dist/client',
+    //   // https://github.com/voorhoede/nuxt-twa-module#readme
+    //   defaultUrl: 'url',
+    //   hostName: 'nuxt-app-test.netlify.app',
+    //   sha256Fingerprints: ['/* your SHA-256 keys */'],
+    //   applicationId: 'com.example.example',
+    //   launcherName: 'Your app name',
+    //   versionCode: 1,
+    //   versionName: '1.0',
+    //   statusBarColor: 'grey',
+    //   iconPath: '/static/icon.png',
+    //   // distFolder: '.nuxt/dist/client',
   },
   ngrok: {
     addr: 8080
@@ -124,6 +124,12 @@ export default {
   axios: {},
   content: {}, // dir: 'content' // default
   vuetify: {
+    defaultAssets: {
+      font: {
+        family: 'Roboto'
+      },
+      icons: false
+    },
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
