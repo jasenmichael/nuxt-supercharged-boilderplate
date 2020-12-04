@@ -97,7 +97,13 @@ export default {
               statuses: [0, 200]
             }
           }]
-    }
+    },
+    manifest: {
+      name: title,
+      lang: siteData.lang || "en-US",
+      display: "standalone",
+      start_url: "/"
+    },
   },
   // twa: {
   //   // https://github.com/voorhoede/nuxt-twa-module#readme
