@@ -53,8 +53,6 @@
 
     <v-main>
       <v-container>
-        <pre>{{ social }}</pre>
-        <!-- <pre>{{ $config.siteData.networks }}</pre> -->
         <nuxt />
       </v-container>
     </v-main>
