@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" :clipped="clipped" fixed app>
       <v-list>
         <v-list-item
-          v-for="(item) in items"
+          v-for="item in items"
           :key="item.title"
           :to="item.to"
           router
@@ -27,16 +27,17 @@
         </v-list-item>
         <hr />
         <v-list-item
-          v-for="(item) in social"
+          v-for="item in social"
           :key="item.name"
           :href="item.href"
+          :aria-label="item.alt"
           target="_blank"
         >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title v-text="item.name" />
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -44,15 +45,17 @@
 
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-btn icon @click.stop="drawer = !drawer">
-        <v-icon> {{ icons.mdiMenu }} </v-icon>
+        <v-avatar rounded color="white">
+          <v-img :src="require('~/assets/icon.png')" />
+        </v-avatar>
       </v-btn>
-      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer" /> -->
       <v-toolbar-title v-text="$config.siteData.name" />
       <v-spacer />
     </v-app-bar>
 
     <v-main>
       <v-container>
+        <pre>{{ social }}</pre>
         <nuxt />
       </v-container>
     </v-main>
@@ -68,10 +71,10 @@ import {
   mdiApps,
   mdiChartBubble,
   mdiCog,
-  mdiMenu,
   mdiContacts,
   mdiTwitter,
   mdiFacebook,
+  mdiGithub,
 } from '@mdi/js'
 
 export default {
@@ -81,10 +84,10 @@ export default {
       mdiApps,
       mdiChartBubble,
       mdiCog,
-      mdiMenu,
       mdiContacts,
       mdiTwitter,
       mdiFacebook,
+      mdiGithub,
     },
     clipped: true,
     drawer: false,
@@ -112,7 +115,7 @@ export default {
       return this.$config.siteData.networks.map((network) => {
         return {
           name: network.name,
-          title: '@' + network.handle,
+          alt: '@' + network.handle,
           href: network.url,
           icon: this.icon(network.name),
         }
@@ -127,6 +130,8 @@ export default {
           return this.icons.mdiTwitter
         case 'Facebook':
           return this.icons.mdiFacebook
+        case 'Github':
+          return this.icons.mdiGithub
         default:
           return
       }
