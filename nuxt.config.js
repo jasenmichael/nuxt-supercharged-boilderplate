@@ -62,7 +62,6 @@ export default {
     '@nuxt/content',
   ],
   pwa: {
-    // icon: false,
     meta: {
       /* meta options */
       // mobileAppIOS: true,
@@ -83,22 +82,22 @@ export default {
       // twitter:description
       // twitter:image:alt
     },
-    // workbox: {
-    //       cleanupOutdatedCaches: true,
-    //       runtimeCaching: [{
-    //         urlPattern: 'https://fonts.googleapis.com/.*',
-    //         // handler: 'cacheFirst',
-    //         cacheableResponse: {
-    //           statuses: [0, 200]
-    //         }
-    //       }, {
-    //         urlPattern: 'https://cdn.jsdelivr.net/.*',
-    //         // handler: 'cacheFirst',
-    //         cacheableResponse: {
-    //           statuses: [0, 200]
-    //         }
-    //       }]
-    // }
+    workbox: {
+          cleanupOutdatedCaches: true,
+          runtimeCaching: [{
+            urlPattern: 'https://fonts.googleapis.com/.*',
+            // handler: 'cacheFirst',
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }, {
+            urlPattern: 'https://cdn.jsdelivr.net/.*',
+            // handler: 'cacheFirst',
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }]
+    }
   },
   // twa: {
   //   // https://github.com/voorhoede/nuxt-twa-module#readme
