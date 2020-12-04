@@ -124,12 +124,13 @@ export default {
   axios: {},
   content: {}, // dir: 'content' // default
   vuetify: {
-    defaultAssets: {
-      font: {
-        family: 'Roboto'
-      },
-      icons: false
-    },
+    defaultAssets: false,
+    // {
+    //   font: {
+    //     family: 'Roboto'
+    //   },
+    //   icons: false
+    // },
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
