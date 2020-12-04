@@ -55,7 +55,7 @@
 
     <v-main>
       <v-container>
-        <pre>{{ social }}</pre>
+        <!-- <pre>{{ social }}</pre> -->
         <nuxt />
       </v-container>
     </v-main>
