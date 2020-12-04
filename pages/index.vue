@@ -22,14 +22,10 @@
 <script>
 import getMeta from '~/utils/getMeta.js'
 export default {
-  middleware({ redirect, route }) {
-    route.path == '/home' && redirect('/')
-  },
-  async asyncData({ $content, params }) {
-    const page = await $content(`pages/${params.page || 'home'}`).fetch()
+  async asyncData({ $content }) {
+    const page = await $content('pages/home').fetch()
     return {
       page,
-      params,
     }
   },
   computed: {
@@ -42,8 +38,8 @@ export default {
     meta() {
       const metaData = {
         type: 'website', // use article for blogs and such
-        title: this.page.title,
-        description: this.page.description,
+        title: this.$config.siteData.name,
+        description: this.$config.siteData.description,
         url: this.canonicalUrl,
         mainImage:
           ((this.$config.ngrok && this.$config.ngrok.url) ||
@@ -54,15 +50,8 @@ export default {
   },
   head() {
     return {
-      title: this.page.title,
-      meta: [
-        ...this.meta,
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: this.canonicalUrl,
-        },
-      ],
+      title: this.$config.siteData.name,
+      meta: this.meta,
       link: [
         {
           hid: 'canonical',

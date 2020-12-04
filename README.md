@@ -40,6 +40,8 @@ steps taken to create:
   - [x] enable netlify identity
   - [x] invite self
   - [x] enable git-gateway
+- [ ] improve pwa lighthouse score
+  - [ ] fix... 
   todo:
 - [ ] implement twa module  
 - [ ] install post-css

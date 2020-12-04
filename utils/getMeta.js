@@ -1,6 +1,9 @@
-export default (meta, siteData, canonical) => {
+const siteData = require('../content/sitedata.json')
+
+export default (meta) => {
+// export default (meta, siteData, canonical) => {
   const type = "website";
-  const url = canonical || siteData.url;
+  const url = meta.url || siteData.url;
   const title = siteData.title;
   const description = siteData.description;
   const mainImage = url + "/og-share.png"

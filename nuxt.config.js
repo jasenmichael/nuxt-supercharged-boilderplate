@@ -2,7 +2,6 @@ const siteData = require('./content/sitedata.json')
 const host = "0.0.0.0" // or "localhost"
 const port = 3000
 const url = process.env.NODE_ENV != "production" ? `http://localhost:${port}` : (process.env.URL || `http://localhost:${port}`)
-// console.log("URL:", url)
 const title = siteData.name || process.env.npm_package_name.replace(/-/g, " ").replace(/(^\w{1})|(\s+\w{1})/g, l => l.toUpperCase())
 const description = siteData.description || process.env.npm_package_description
 const twitterHandle = '@' + siteData.networks.filter(network => network.name == "Twitter")[0].handle
@@ -63,7 +62,7 @@ export default {
     '@nuxt/content',
   ],
   pwa: {
-    icon: false,
+    // icon: false,
     meta: {
       /* meta options */
       // mobileAppIOS: true,
@@ -72,7 +71,7 @@ export default {
       description,
       lang: siteData.lang || "en-US",
       theme_color: "black",
-      // ogHost: url,
+      ogHost: url,
       ogImage: {
         path: defaultShareImage
       },
@@ -104,7 +103,7 @@ export default {
   // twa: {
   //   // https://github.com/voorhoede/nuxt-twa-module#readme
   //   defaultUrl: 'url',
-  //   hostName: 'nuxt-twa-netlify.netlify.app',
+  //   hostName: 'nuxt-app-test.netlify.app',
   //   sha256Fingerprints: ['/* your SHA-256 keys */'],
   //   applicationId: 'com.example.example',
   //   launcherName: 'Your app name',

@@ -49,20 +49,13 @@ export default {
           ((this.$config.ngrok && this.$config.ngrok.url) ||
             this.$config.baseUrl) + (this.page.cover || '/og-share.png'),
       }
-      return getMeta(metaData, this.$config.siteData, this.canonicalUrl)
+      return getMeta(metaData)
     },
   },
   head() {
     return {
       title: this.page.title,
-      meta: [
-        ...this.meta,
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: this.canonicalUrl,
-        },
-      ],
+      meta: this.meta,
       link: [
         {
           hid: 'canonical',
