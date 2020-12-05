@@ -14,7 +14,11 @@ export default {
     route.path == '/home' && redirect('/')
   },
   async asyncData({ $content, params }) {
-    const page = await $content(`pages/${params.page || 'home'}`).fetch()
+    const page = await $content(`pages/${params.page || 'home'}`)
+      .fetch()
+      // .catch(err => {
+      //   return Error({ statusCode: 404, message: "Page not found" });
+      // });
     return {
       page,
       params,
@@ -35,7 +39,7 @@ export default {
         url: this.canonicalUrl,
         mainImage:
           ((this.$config.ngrok && this.$config.ngrok.url) ||
-            this.$config.baseUrl) + (this.page.cover || '/og-share.png'),
+            this.$config.baseUrl) + (this.page.cover || '/img/og-share.png'),
       }
       return getMeta(metaData)
     },

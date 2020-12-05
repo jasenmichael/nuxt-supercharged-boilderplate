@@ -31,7 +31,7 @@ export default {
         url: this.canonicalUrl,
         mainImage:
           ((this.$config.ngrok && this.$config.ngrok.url) ||
-            this.$config.baseUrl) + (this.page.cover || '/og-share.png'),
+            this.$config.baseUrl) + (this.page.cover || '/img/og-share.png'),
       }
       return getMeta(metaData, this.$config.siteData, this.canonicalUrl)
     },

@@ -1,14 +1,15 @@
 # Nuxt Supercharged Boilerplate
 
-> nuxt pwa twa netlify identity and netlifycms
-
 Features: 
 - Nuxt.js
 - Progressive Web App (PWA)
-- Trusted Web Application (TWA) 
+- Trusted Web Application (TWA) -- soon
 - Authentication with Netlify Identity
-- Content Management System(CMS) with NetlifyCms
+- Open Graph and Twitter head tags for SEO
+- Content Management System(CMS) with NetlifyCms (and local cms proxy)
 - Flat-file site settings (editable through NetlifyCms)
+
+see it in action [here](https://nuxt-supercharged-boilderplate.netlify.app/)
 
 ## 💫 Deploy
 
